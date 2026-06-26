@@ -11,12 +11,12 @@ Pure Python 3 CLI to convert between Euro Truck Simulator 2 game time and real t
 
 ## Conversion factor
 
-ETS2 time runs 3× faster than real time.
+ETS2 time runs 20× faster than real time. All values are normalized to seconds internally then converted with `real = ets2 / 20` and `ets2 = real * 20`.
 
 ## State
 
-- Mode 1 (ETS2 → Real) is implemented.
-- Mode 2 (Real → ETS2) is **not implemented** — no `elif` branch exists.
+- Both modes are implemented.
+- Helper functions: `_repr`, `_to_seconds`, `_fmt`.
 
 ## Tooling
 
